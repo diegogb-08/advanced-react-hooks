@@ -13,8 +13,14 @@ const countReducer = (state, action) => {
       }
     }
 
+    case 'DECREMENT': {
+      return {
+        count: state.count - action.step
+      }
+    }
+
     default:
-      throw new Error(`Not supported type: ${action.type}`)
+      throw new Error(`Unsupported action type: ${action.type}`)
   }
 
 }
